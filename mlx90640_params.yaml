@@ -1,0 +1,6 @@
+mlx90640_driver:
+  ros__parameters:
+    i2c_address: 0x33  # Default I2C address of the MLX90640
+    refresh_rate: 32   # Refresh rate in Hz (1, 2, 4, 8, 16, 32)
+    emissivity: 1.0    # Emissivity of the object (1.0 for perfect black body)
+    frame_rate_ms: 100 # Time between frames in milliseconds (10 frames/sec = 100ms)
