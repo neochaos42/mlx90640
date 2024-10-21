@@ -1,0 +1,19 @@
+cmake_minimum_required(VERSION 3.5)
+project(mlx90640_driver)
+
+find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(std_msgs REQUIRED)
+
+add_executable(mlx90640_driver src/mlx90640_driver.cpp)
+ament_target_dependencies(mlx90640_driver rclcpp sensor_msgs std_msgs)
+
+install(TARGETS
+  mlx90640_driver
+  DESTINATION lib/${PROJECT_NAME})
+
+install(DIRECTORY launch config
+  DESTINATION share/${PROJECT_NAME})
+
+ament_package()
